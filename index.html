@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Quiz</title>
+</head>
+<body>
+
+<h2>Interactive Quiz</h2>
+
+<p>Who is the king of the jungle?</p>
+
+<input type="text" id="answer" placeholder="Enter your answer here">
+<button onclick="checkAnswer()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+    function checkAnswer() {
+        const correctAnswer = "LION";
+        const userAnswer = document.getElementById("answer").value;
+
+        if (userAnswer.trim().toUpperCase() === correctAnswer) {
+            document.getElementById("result").innerText = "Correct!";
+        } else {
+            document.getElementById("result").innerText =
+            "Incorrect. The correct answer is Lion.";
+        }
+    }
+</script>
+
+</body>
+</html>
